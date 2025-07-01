@@ -26,7 +26,7 @@
     color: #fff;
     position: relative;
     top: 40%;
-    margin-left: 50px;
+    padding-left: 10px;
 }
 
 .program-text h1{
@@ -61,7 +61,7 @@
 
 @media (max-width) {
   .program-text {
-    margin: auto;
+    padding-left: 10px;
   }
 }
 
@@ -430,4 +430,6 @@ label {
 .program-about h1{
   color: #800020;
 }
+
+
 

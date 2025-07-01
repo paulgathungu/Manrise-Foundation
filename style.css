@@ -270,7 +270,7 @@ section#about {
 }
 
 #about h1{
-    padding: 20px;
+    margin-top: 50px;
     text-align: center;
 
 }
@@ -423,7 +423,7 @@ section#about {
     margin-top: -10px;
     color:#fff;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 50%), url(assets/handss.avif);
     background-size: cover;
     background-position: center;
@@ -463,7 +463,7 @@ section#about {
     border-radius: 5px;
     background-color: #1d1d1d0c;
     padding: 10px 26px;
-    color: #992542;
+    color:rgb(255, 255, 255);
     border: solid 2px #fff;
     text-transform: capitalize;
     cursor: pointer;
@@ -563,6 +563,54 @@ section#about {
   .products p{
     font-size: 15px;
   }
+
+
+.contact {
+    padding: 100px 0;
+    background-color: #f0e3e3;
+}
+
+  .contact button{
+    margin-top: 20px;
+      font-size: 1.1rem;
+      outline: none;
+      border: solid 2px #fff;
+      border-radius: 5px;
+      background-color: #1d1d1d0c;
+      padding: 13px 30px;
+      color: #d32853;
+      text-transform: capitalize;
+      cursor: pointer;
+  }
+  .contact .btn1 button {
+    background-color: #800020;
+    color: #fff;
+  }
+
+  .contact .btn1 button:hover{
+    background-color: #8f1f3b;
+  }
+
+  
+  .contact .btn2 button {
+    margin-left: 20px;
+    color: #800020;
+    border: 2px solid #800020;
+    transition: 0.5s ease;
+  }
+
+  .contact .btn2 button:hover{
+    background-color: #800020;
+    color: #fff;
+    transition: 0.6s ease;
+  }
+
+
+
+
+
+
+
 
 
 /* footer section */
