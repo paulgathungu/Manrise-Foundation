@@ -175,7 +175,7 @@
   @media (max-width:780px) {
     .day{
       display: block;
-      height: 90vh;
+      height: auto;
       }
 
     .day h2{
@@ -320,7 +320,7 @@ button:hover {
 .value-card{
   border-radius: 5px;
   padding: 25px;
-  box-shadow: 2px -1px 7px 4px rgba(38, 34, 34, 0.345);
+  box-shadow: 2px -1px 7px 2px rgba(38, 34, 34, 0.345);
   width: 310px;
   height: 200px;
 }
@@ -337,6 +337,7 @@ button:hover {
 @media (max-width:780px) {
   .value-card{
     margin: auto;
+    width: 100%;
   }
 }
 
