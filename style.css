@@ -308,9 +308,6 @@ section#about {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
     align-items: center;
-    opacity: 0; 
-    transform: translateX(-50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     max-width: 1200px;
     margin: auto;
 }
@@ -569,6 +566,7 @@ section#about {
 
 .products{
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));  
     gap: 20px;
   }
