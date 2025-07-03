@@ -14,6 +14,7 @@ body h1 h2 h3 {
     border-radius: 50%;
 }
 
+/* fade-in effect */
 
 .fade-in {
     opacity: 0;
@@ -41,6 +42,8 @@ body h1 h2 h3 {
     width: 80px;
     height:80px;
 }
+
+/* navbar section */
 
 .navbar-nav{
     margin-left: 30%;
@@ -103,7 +106,7 @@ body h1 h2 h3 {
     position: relative;
     width: 100%;
     height: 100vh; 
-    overflow: hidden;/* Full viewport height for the home section */
+    overflow: hidden;
 }
 
 .hero h2 p{
@@ -121,9 +124,8 @@ body h1 h2 h3 {
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(assets/hold\ hands.jpg);
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Keeps it behind the navbar */
+    z-index: -1;
     animation: zoomIn 15s infinite alternate; 
-    /* Zooming animation */
 }
 
 .hero-text {
@@ -286,7 +288,6 @@ body h1 h2 h3 {
 
 /* about section */
 
-/* General Styling */
 section#about {
     color: #0e0d0d;
     background-color: #ffffff;
@@ -443,10 +444,10 @@ section#about {
 }
 
 .event-container{
-    margin-top: -10px;
+    padding-bottom: 30px;
     color:#fff;
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 50%), url(assets/handss.avif);
     background-size: cover;
     background-position: center;
@@ -554,6 +555,8 @@ section#about {
     }
 }
 
+ /* values section*/
+
 .values {
     text-align: center;
 }
@@ -564,10 +567,11 @@ section#about {
     font-size: 2.5rem;
 }
 
+  /* what to expect*/
+
 .products{
     display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));  
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
     gap: 20px;
   }
 
@@ -592,6 +596,8 @@ section#about {
     font-size: 15px;
   }
 
+
+     /* contact banner part */
 
 .contact {
     padding: 100px 0;

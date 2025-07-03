@@ -24,36 +24,6 @@ const applyBtn = document.getElementById('applyBtn');
       }
     });
 
-    // const form = document.getElementById('applicationForm');
-
-    // form.addEventListener('submit', async (e) => {
-    //   e.preventDefault();
-
-    //   const formData = new FormData(form);
-    //   const data = Object.fromEntries(formData.entries());
-
-    //   try {
-    //     const response = await fetch('https://formspree.io/f/xblywojb', {
-    //       method: 'POST',
-    //       headers: { 'Content-Type': 'application/json' },
-    //       body: JSON.stringify(data),
-    //     });
-
-    //     if (response.ok) {
-    //       form.reset();
-    //       formModal.classList.remove('active');
-    //       successMessage.classList.add('active');
-    //       setTimeout(() => {
-    //         successMessage.classList.remove('active');
-    //       }, 3000); // Hide the success message after 3 seconds
-    //     } else {
-    //       alert('Failed to submit form.');
-    //     }
-    //   } catch (error) {
-    //     console.error('Error:', error);
-    //     alert('An error occurred.');
-    //   }
-    // });
     document.getElementById("contactForm").addEventListener("submit", async function (event) {
       event.preventDefault(); // Prevent default form submission
   
@@ -85,3 +55,4 @@ const applyBtn = document.getElementById('applyBtn');
       }
   });
   
+
