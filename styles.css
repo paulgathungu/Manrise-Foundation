@@ -336,7 +336,7 @@ form {
   width: 100%;
   margin-bottom: 4rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+  grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));  
   gap: 30px;
 }
 
@@ -367,11 +367,15 @@ form {
 
 @media (max-width:780px) {
   .value-card{
-    margin: auto;
     width: 100%;
   }
 }
 
+@media (max-width:600px){
+  .values{
+    grid-template-columns: repeat(auto-fit, minmax(0px, 4fr)); 
+  }
+}
 
  /* contact page */
 
