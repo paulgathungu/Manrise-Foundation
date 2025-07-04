@@ -218,7 +218,7 @@ nav a.active {
         text-align: center;
         overflow: hidden;
         margin: auto;
-        height: 100vh;
+        height: 90vh;
     }
     .hero h2 {
         font-size: 2.5rem;
@@ -563,6 +563,10 @@ section#about {
     .values{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+  }
+  .value-card{
+    margin: auto;
+    width: 100%;
   }
   /* what to expect*/
 
