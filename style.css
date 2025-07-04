@@ -10,9 +10,6 @@ body h1 h2 h3 {
     color: #800020;
 }
 
-.favicon {
-    
-}
 
 /* fade-in effect */
 
@@ -43,6 +40,8 @@ body h1 h2 h3 {
 }
 
 /* navbar section */
+
+
 
 .navbar-nav{
     margin-left: 30%;
@@ -99,6 +98,11 @@ body h1 h2 h3 {
         transform: scale(1.1);
     }
 }
+
+nav a.active {
+    color: #800020;
+  }
+
 
 /* hero section */
 
@@ -326,7 +330,6 @@ section#about {
 .about-image img {
     
     width: 100%;
-    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     object-fit: cover;
     transition: transform 5s ease;
@@ -383,61 +386,14 @@ section#about {
 
 /* what we offer */
 
-
-#what-we-offer {
-    background-color: #f9f9f9;
-    padding: 50px 20px;
-    text-align: center;
-}
-
 .offer-container h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #800020;
 }
 
-.offer-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
 
-.offer-item {
-    padding: 50%;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: left;
-}
 
-.offer-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #800020;
-}
-
-.offer-item p {
-    font-size: 1rem;
-    color: #453a3a;
-}
-
-@media (max-width:780px) {
-    #what-we-offer{
-        text-align: center;
-        overflow: hidden;
-        padding: auto;
-        margin: auto;
-    }
-    .offer-items {
-        text-align: center;
-        margin: auto;
-        padding: auto;
-    }
-    .offer-item {
-        text-align: center;
-        margin: auto;
-        padding: auto;
-    }
-}
 
 /* event part */
 
@@ -563,12 +519,11 @@ section#about {
  /* values section*/
 
  .values{
-    overflow-y: hidden;
     width: 100%;
     margin-bottom: 4rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
-    gap: 20px;
+    gap: 30px;
   }
   
    /* values about section*/
@@ -619,7 +574,7 @@ section#about {
   .product-card {
     padding: 15px;
     background: #fff;
-    text-align: center;
+    text-align: left;
   }
 
   .product-card img {

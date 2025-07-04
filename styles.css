@@ -12,7 +12,7 @@
     transition: color 0.3s ease;
 }
 
-   /* progam hero section*/
+   /* program hero section*/
 
 .hero-program{
     position: absolute;
@@ -65,8 +65,23 @@
 }
 
 
-@media (max-width) {
+@media (max-width:780px) {
+  .hero-program{
+    height: 100vh;
+    padding-bottom: 100px;
+  }
+  .program-text h1{
+    font-size: 40px;
+}
+
+.program-text p{
+    font-size: 20px;
+    color: #d6cfcf;
+}
+
+
   .program-text {
+    top: 35%;
     padding-left: 10px;
   }
 }
@@ -318,12 +333,11 @@ form {
 }
 
 .values{
-  overflow-y: hidden;
   width: 100%;
   margin-bottom: 4rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
-  gap: 20px;
+  gap: 30px;
 }
 
  /* values about section*/
@@ -427,7 +441,9 @@ label {
   transform: scale(0.95);
 }
 
-
+.contact-r{
+  margin-bottom: 30px;
+}
 .contact-us {
   margin-bottom: 60px;
   display: grid;

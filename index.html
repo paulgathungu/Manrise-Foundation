@@ -15,6 +15,10 @@
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/24a3a88dfa.js" crossorigin="anonymous"></script>
+    <style>
+
+
+    </style>
 </head>
 <body>
     <section id="home">
@@ -28,7 +32,7 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link active" href="#home">Home</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="About.html">About</a>
@@ -51,13 +55,13 @@
             <p>Empowering the Future, One Boy at a Time</p>
             <h4>Guiding boys to discover their purpose, build strong character, <br> lead with integrity, and grow into men who will inspire and transform their <br> World!!</h4>
             <a href="About.html" class="btn2" ><button>Learn More</button></a>
-            <a href="programss.html" class="btn"><button>Our Programs</button></a>
+            <a href="program.html" class="btn"><button>Our Programs</button></a>
         </div>    
         </div>
     </section>
 
     <section id="about">
-      <h1 class="py-5">Who we are</h1>
+      <h1 class="">Who we are</h1>
         <div class="about-container">
           <div class="about-image">
             <img src="assets/specs img.jpg"  alt="About Image">
@@ -65,13 +69,13 @@
             
             <div class="about-text fade-in">
                 <p>
-                  Manrise is a mentorship organization committed to empowering young men with purpose, integrity, and leadership. 
+                  Manrise is a mentorship organization committed to spur boys into young men with a purpose, integrity, and leadership skills. 
                   In a world where positive male role models and clear guidance are often lacking, Manrise provides the support, challenges, and inspiration 
                   needed to nurture authentic manhood.
               </p>
               <p>
-                  Founded by experienced mentors and fathers, Manrise combines timeless wisdom, practical life skills, and character development 
-                  to create a supportive community where young men can thrive. Our mission is to raise a generation of men equipped to lead, serve, and make 
+                  Honed through experience,our mentors, offer a blend of timeless wisdom, practical life skills, and character formation 
+                  to create a supportive community where young men can flourish. Our  is to raise a generation of men equipped to lead, serve, and make 
                   a positive impact in their families, communities, and beyond.
               </p>
             </div>
@@ -80,26 +84,7 @@
     </section>
 
     <section  id="what-we-offer" >
-        <div class="offer-container fade-in">
-              <h2>What We Offer</h2>
-            <div class="offer-items">
-                <div class="offer-item">
-                    <h3></h3>            
-                    <p> Our program teaches practical skills such as time management, goal setting, and effective communication to help
-                      young men succeed in their daily lives. It also offers Character Building
-                      through interactive activities and discussions, we nurture core values such as discipline,
-                        responsibility, and integrity to shape strong, principled individuals.</p>
-                </div>
-                <div class="offer-item">
-                  <h3></h3>
-                    <p>Through Community Engagement We encourage young men to give back by engaging in activities that make a positive impact on their
-                      communities and foster a sense of responsibility and purpose.
-                      Also through Personal Mentorship We connect boys with positive role models who provide guidance, support, and inspiration on their journey to manhood.
-                    lastly through Life Skills Development Our Leadership Training provide young men with the tools and skills to lead with
-                    confidence and integrity, empowering them to take charge in their communities and personal lives. </p>
-                </div>
-                    </div>
-            </div>
+        
     </section>
 
     <section id="event" >
@@ -118,7 +103,7 @@
 
 
 
-    <section id="goals" class="container-fluid fade-in" >
+    <section id="goals" class="container fade-in py-5" >
       
       <div class="vision" >
         <svg xmlns="http://www.w3.org/2000/svg" class="" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#800020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -146,7 +131,7 @@
 
     <section>
       <section id="values" class="fade-in">
-        <h2>Our Core Values</h2>
+        <h2 class="text-center">Our Core Values</h2>
         <p class="text-center"> The principles that guide our work and shape our impact</p>
         <div class="values container-fluid">
           <div class="value-card text-start">
@@ -178,11 +163,15 @@
         </div>
       </section>
     <section>
-      <div class="products">
-        <div class="product-card fade-in">
+       <div class="offer-container fade-in text-center">
+                <h2>What We Offer</h2>
+        </div>
+
+      <div class="products fade-in">
+        <div class="product-card text-left">
           <img src="assets/oneon2.jpg" alt="" width="280px" height="300px" />
           <h3>Leadership Development Program</h3>
-          <p>
+          <p class=" text-left">
             Our leadership program helps young men develop essential skills, fostering confidence and resilience for future success in all areas of life.
           </p>
         </div>
@@ -245,7 +234,7 @@
           <h3>Contact Us</h3>
           <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
           <p><i class="fas fa-envelope"></i> manriseprog@gmail.com</p>
-          <p><i class="fas fa-phone"></i> +254 706 073 307</p>
+          <p><i class="fas fa-phone"></i> +254 748 965 752</p>
         </div>
     
         <!-- Social Media Links -->
@@ -279,7 +268,17 @@
 
 
 
-
+    <script>
+      const links = document.querySelectorAll("nav a");
+      const currentURL = window.location.pathname;
+    
+      links.forEach(link => {
+        if (link.getAttribute("href") === currentURL.split("/").pop()) {
+          link.classList.add("active");
+        }
+      });
+    </script>
+    
 
 
 
