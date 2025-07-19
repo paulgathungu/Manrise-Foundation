@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Child Registration Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .form-container {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 30px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #800020;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #000000;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .radio-group label {
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .submit-btn {
+      background-color: #800020;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #961a39;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      font-size: 18px;
+      color: #28a745;
+      margin-top: 20px;
+    }
+
+    .payment-section {
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+
+    .payment-section h4 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .home{
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Child Registration Form</h2>
+  <form id="registrationForm" action="https://formspree.io/f/xblywojb" method="POST">
+    
+    <label for="parentName">Parent / Guardian Name</label>
+    <input type="text" id="parentName" name="Parent / Guardian Name" placeholder="Enter parent/guardian name" required>
+
+    <label for="childName">Child's Full Name</label>
+    <input type="text" id="childName" name="Child Name" placeholder="Enter child's full name" required>
+
+    <label for="childAge">Child's Age</label>
+    <input type="text" id="childAge" name="Child Age" placeholder="Enter child's age" required>
+
+    <label>Gender</label>
+    <div class="radio-group">
+      <label><input type="radio" name="Gender" value="Boy" required> Boy</label>
+      <label><input type="radio" name="Gender" value="Girl" required> Girl</label>
+    </div>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="Phone Number" placeholder="Enter phone number" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="Email" placeholder="Enter email address" required>
+
+    <label for="pickupPerson">Who is allowed to pick up the child?</label>
+    <input type="text" id="pickupPerson" name="Pickup Person" placeholder="Enter names of authorized persons" required>
+
+    <label for="allergies">Does the child have any allergies?</label>
+    <textarea id="allergies" name="Allergies" placeholder="List any allergies or dietary restrictions" rows="3"></textarea>
+
+    <div class="payment-section">
+        <h4>Payment</h4>
+        <p>To complete your registration, please pay <strong>KES 500</strong> via M-Pesa:</p>
+      <ul>
+        <li><strong>Till Number:</strong> 123456</li>
+        <li><strong>Amount:</strong> KES 500</li>
+      </ul>
+      <p>After payment, please fill the form below:</p>
+
+        <label>Full Name:</label><br>
+        <input type="text" name="name" required><br>
+
+        <label>Phone Number Used:</label><br>
+        <input type="text" name="phone" required><br>
+
+        <label>M-pesa. Transaction Code:</label><br>
+        <input type="text" name="mpesa_code" required><br>
+
+        <label>Upload Payment Screenshot (optional):</label><br>
+        <input type="file" name="screenshot"><br><br>
+
+        </div>
+
+          <button type="submit" class="submit-btn">Submit Application</button>
+          <div class="success-message" id="successMessage">Application submitted successfully!</div>
+          <p><a href="index.html" class="home">Go back home</a></p>
+        </form>
+      </div>
+
+      <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+          e.preventDefault(); // Prevent default form submission
+      
+          const form = this;
+          const successMessage = document.getElementById('successMessage');
+          const formContainer = form.parentElement;
+      
+          // Submit via fetch
+          fetch(form.getAttribute('action'), {
+            method: form.getAttribute('method'),
+            body: new FormData(form),
+            headers: {
+              'Accept': 'application/json'
+            }
+          })
+          .then(response => {
+            if (response.ok) {
+              formContainer.style.display = 'none'; // Hide form
+              successMessage.textContent = 'Application is successful';
+              successMessage.style.display = 'block';
+      
+              setTimeout(() => {
+                form.reset();
+                successMessage.style.display = 'none';
+                formContainer.style.display = 'block'; // Show form again
+              }, 2000);
+            } else {
+              alert('There was a problem with your submission. Please try again.');
+            }
+          })
+          .catch(error => {
+            alert('Error: ' + error);
+          });
+        });
+      </script>
+      
+
+</body>
+</html>

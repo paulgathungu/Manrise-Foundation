@@ -218,7 +218,7 @@ nav a.active {
         text-align: center;
         overflow: hidden;
         margin: auto;
-        height: 80vh;
+        height: 89vh;
     }
     .hero h2 {
         font-size: 3rem;
@@ -387,25 +387,31 @@ section#about {
 
 /* what we offer */
 
-.offer-container h2 {
+.event-header h1 {
+  text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #800020;
 }
 
-
-
-
 /* event part */
 
 #event h2{
-    padding: 20px;
-    padding-bottom: 60px;
-    background-color: #fff;
-    text-align: center;
+  padding: 20px;
+  padding-bottom: 60px;
+  text-align: center;
+  color: #800020;
 }
 
-.event-container{
+
+#event2 h2{
+  padding: 20px;
+  margin: 60px;
+  text-align: center;
+  color: #800020;
+}
+
+#event .event-container{
     padding-bottom: 30px;
     color:#fff;
     width: 100%;
@@ -414,6 +420,17 @@ section#about {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+#event2 .event-container{
+  padding-bottom: 30px;
+  color:#fff;
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 50%), url(assets/jumping\ sunset.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .event-text{
@@ -569,6 +586,13 @@ section#about {
     width: 100%;
   }
   /* what to expect*/
+
+  .offer-container h2 {
+    text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #800020;
+  }
 
 .products{
     display: grid;
