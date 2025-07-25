@@ -54,5 +54,15 @@ const applyBtn = document.getElementById('applyBtn');
           console.error("An unexpected error occurred:", error);
       }
   });
+
+  const navLinks = document.querySelectorAll('.nav-link');
+  const currentPage = window.location.pathname.split('/').pop();
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (linkPage === currentPage || (linkPage === 'index.html' && currentPage === '')) {
+      link.classList.add('active');
+    }
+  });
   
 

@@ -107,32 +107,32 @@
 </head>
 <body>
     <section id="home">
-        <header>
-            <nav id="navbar" class="navbar navbar-expand-lg py-3">
-                <div class="container">
-                  <img src="assets/main-logo.png" >
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="About.html">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#home">Program</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us </a>
-                      </li>
-                    </ul>                
-                  </div>
-                </div>
-              </nav>
-        </header>
+      <header>
+        <nav id="navbar" class="navbar navbar-expand-lg py-3">
+            <div class="container">
+              <img src="assets/main-logo.png" width="280px" height="300px">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="About.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="program.html">Program</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us </a>
+                  </li>
+                </ul>                
+              </div>
+            </div>
+          </nav>
+    </header>
 
         <div class="hero-about">
           <div class="about-txt">
@@ -155,7 +155,8 @@
       <h2>Boys Program</h2>
       <div class="event-container">
         <div class="event-text" id="event-text" >
-          <p>Aug 4th - 8th, 2025 | Location: Potter House School, near Ruaka</p>
+          <p>Ages 10 - 18</p>
+          <p>Aug 4th - 8th, 2025 | Location: Potterhouse School, near Ruaka</p>
           <h1>Sign up today for the Boys <br> Summer Program <br> On 4th August - 8th august  <br> from 9:00 AM - 1:00 PM</h1>
           <h1 class="py-3">Releasing the Man in the Boy</h1>
           <p>Join our 5-Day transformative mentorship program designed <br> to bridge the gap 
@@ -173,7 +174,8 @@
       <h2>Girls Program</h2>
       <div class="event2-container" >
         <div class="event2-text" id="event2-text" >
-          <p>Aug 4th - 8th, 2025 | Location: Potter House School, near Ruaka</p>
+          <p>Ages 10 - 18</p>
+          <p>Aug 4th - 8th, 2025 | Location: Potterhouse School, near Ruaka</p>
           <h1>Sign up today for the Girls <br> Summer Program <br> On - 4rth August - 8th August  <br> from 9:00 AM - 1:00 PM</h1>
           <h1 class="py-3">Releasing the Grace in the girl</h1>
           <p>Join our 5-Day transformative mentorship program designed <br> to bridge the gap 
@@ -232,14 +234,24 @@
           <p>&copy; 2025 Manrise and Ishaforge Foundation. All Rights Reserved.</p>
         </div>
       </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script>
+        const links = document.querySelectorAll("nav a");
+        const currentPath = window.location.pathname.split("/").pop(); // gets filename
+      
+        links.forEach(link => {
+          const linkPath = link.getAttribute("href");
+          if (linkPath === currentPath || (linkPath === "index.html" && currentPath === "")) {
+            link.classList.add("active");
+          }
+        });
+      </script>
 
 
 
 
-
-
-
-
+     
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> 
