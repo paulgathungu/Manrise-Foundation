@@ -33,7 +33,7 @@ const applyBtn = document.getElementById('applyBtn');
   
       try {
           // Send form data to Formspree
-          const response = await fetch("https://formspree.io/f/xblywojb", {
+          const response = await fetch("https://formspree.io/f/xnnvranw", {
               method: "POST",
               body: formData,
               headers: {
