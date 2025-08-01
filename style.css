@@ -366,7 +366,6 @@ section#about {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
     align-items: center;
-    max-width: 1200px;
     margin: auto;
 }
 
