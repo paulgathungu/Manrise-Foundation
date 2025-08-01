@@ -360,11 +360,11 @@ section#about {
 }
 
 .about-container {
-    padding-left: 20px;
+  max-width: 1200px;
     padding-top: 60px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 30px;
+    gap: 10px;
     align-items: center;
     margin: auto;
 }
@@ -397,10 +397,6 @@ section#about {
 
 }
 
-.about-text hr{
-    color: red;
-    margin-bottom: 30px;
-}
 
 
 
@@ -409,7 +405,7 @@ section#about {
     line-height: 1.6;
 }
 
-.about-text div {
+.about-text  {
     color: #766c6c;
     font-size: 1rem;
     margin-bottom: 30px;
