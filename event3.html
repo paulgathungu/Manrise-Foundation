@@ -220,9 +220,9 @@
         </table>
       </div>
 
-      <div class="card">
+      <div class="card" id="formContainer">
         <h3>Reserve Your Spot</h3>
-        <form id="registrationForm " action="https://formspree.io/f/xnnvranw" method="POST">
+        <form id="contactForm" >
           <div class="row">
             <div><label>Student Name</label><input name="name" required type="text" placeholder="Full name"></div>
             <div><label>Age</label><input name="age" required type="number" min="10" max="18" placeholder="10–18"></div>
@@ -235,7 +235,9 @@
             <label>Notes (allergies, accessibility)</label>
             <textarea name="notes" rows="3"></textarea>
           </div>
-          <div class="success-message" id="successMessage">Application submitted successfully!</div>
+          <div class="thank-you-message" id="thankYouMessage">
+            Registration Successful!
+          </div>
           <button type="submit" class="btn btn--brand">Register</button>
         </form>
       </div>
@@ -275,7 +277,8 @@
     <!-- About Section -->
     <div class="footer-column">
       <h3>About Us</h3>
-      <p>Building the next generation of purposeful, honorable men and women through mentorship programs that transform both boys' and girls' lives.</p>
+      <p>ManRise & IshForge Foundation <br>
+        Transforming boys and girls into confident, honorable young adults through guided mentorship and life-building programs</p>
     </div>
 
     <!-- Quick Links -->
@@ -317,41 +320,43 @@
 </footer>
 
 
-
 <script>
-  document.getElementById('registrationForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent default form submission
+  const formContainer = document.getElementById("formContainer");
+  const contactForm = document.getElementById("contactForm");
+  const thankYouMessage = document.getElementById("thankYouMessage");
 
-    const form = this;
-    const successMessage = document.getElementById('successMessage');
-    const formContainer = form.parentElement;
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-    // Submit via fetch
-    fetch(form.getAttribute('action'), {
-      method: form.getAttribute('method'),
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => {
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://formspree.io/f/xnnvranw", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
       if (response.ok) {
-        formContainer.style.display = 'none'; // Hide form
-        successMessage.textContent = 'Application is successful';
-        successMessage.style.display = 'block';
+        // Hide the form and display the thank-you message
+        contactForm.style.display = "none";
+        thankYouMessage.style.display = "block";
 
+        // After 3 seconds, hide the thank-you message and show the form
         setTimeout(() => {
-          form.reset();
-          successMessage.style.display = 'none';
-          formContainer.style.display = 'block'; // Show form again
-        }, 2000);
+          thankYouMessage.style.display = "none";
+          contactForm.reset(); // Clear form inputs
+          contactForm.style.display = "block";
+        }, 3000);
       } else {
-        alert('There was a problem with your submission. Please try again.');
+        alert("Something went wrong. Please try again.");
       }
-    })
-    .catch(error => {
-      alert('Error: ' + error);
-    });
+    } catch (error) {
+      alert("An error occurred: " + error.message);
+    }
   });
 </script>
 

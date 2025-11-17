@@ -24,7 +24,6 @@
     background-size: cover;
     background-position: center;
 }
-about-txt
 
 .abt{
   color: #800020;
@@ -83,7 +82,7 @@ about-txt
 
 
   .program-text {
-    top: 50%;
+    top: 30%;
     padding-left: 10px;
   }
 }
@@ -289,7 +288,7 @@ form {
     display: none;
 }
 
- /* about section */
+ /* about page section */
 
 
 .hero-about{
@@ -333,7 +332,7 @@ form {
     height: 100vh;
   }
   .about-txt {
-    top: 50%;
+    top: 30%;
   }
   .about-txt p{
     font-size: 20px;
