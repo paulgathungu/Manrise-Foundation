@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>program</title>
+    <title>Program | ManRise & IshaForge Foundation</title>
     <link rel="icon" class="favicon" type="image/png" href="assets/manrise-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="scripts.js"></script>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
         #event2 .event2-container{
               padding-bottom: 30px;
@@ -102,6 +102,9 @@
                 padding-bottom: 40px;
             }
         }
+        .list{
+          list-style: none;
+        }
 
     </style>
 </head>
@@ -110,20 +113,28 @@
       <header>
         <nav id="navbar" class="navbar navbar-expand-lg py-3">
             <div class="container">
-              <img src="assets/main-logo.png" width="280px" height="300px">
+              <div class ="logo">
+                <img  src="assets/main-logo.png" width="280px" height="300px">
+              </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="About.html">About</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="program.html">Program</a>
+                    <a class="nav-link" href="event3.html">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="program.html">Programs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact Us </a>
@@ -133,11 +144,12 @@
             </div>
           </nav>
     </header>
+    
 
         <div class="hero-about">
           <div class="about-txt">
             <h1>Programs</h1>
-            
+            <p>Structured, safe, and designed for growth</p>
             </div>
         </div>
 
@@ -147,47 +159,77 @@
     <div class="program-about text-center py-5 container">
       <h1 class="py-2">Our Programs</h1>
       <p>At ManRise, we offer a variety of mentorship programs designed to meet the diverse needs of young men. Each program
-         is carefully crafted to provide guidance, support, and resources to help them achieve their full potential. Discover 
-         the program that best fits your aspirations and embark on a journey of self-discovery and growth. </p>
+          is carefully crafted to provide guidance, support, and resources to help them achieve their full potential. Discover 
+          the program that best fits your aspirations and embark on a journey of self-discovery and growth. </p>
     </div>
 
-    <section id="event" >
-      <h2>Boys Program</h2>
-      <div class="event-container">
-        <div class="event-text" id="event-text" >
-          <p>Ages 10 - 18</p>
-          <p>Aug 4th - 8th, 2025 | Location: Potterhouse JuniorSchool, along Northern Bypass</p>
-          <h1>Sign up today for the Boys <br> Summer Program <br> On 4th August - 8th august  <br> from 9:00 AM - 1:00 PM</h1>
-          <h1 class="py-3">Releasing the Man in the Boy</h1>
-          <p>Join our 5-Day transformative mentorship program designed <br> to bridge the gap 
-            between boyhood and manhood. In a world where young men 
-            <br>often lack clear rites of passage and positive male role models, our program provides
-            <br> the guidance, challenges, and affirmation needed for boys to develop into men of <br> purpose and character.</p>
-          <a href="event.html"><button>View program Details..</button></a>
-        </div>
+    <h2 style="margin-top:28px"></h2>
+    <div class="container-fluid grid grid--3">
+      <div class="card">
+        <div class="card__thumb"><img src="assets/one-on-boy-desk.jpg" alt="Coding class"></div>
+        <h3>Leadership Development Program</h3>
+        <p class=" text-left">
+          Our leadership program helps young boys and girls develop essential skills, fostering confidence and resilience for future success in all areas of life.
+        </p>
       </div>
+      <div class="card">
+        <div class="card__thumb"><img src="assets/close-up-man-kid-doing-homework.jpg" height="300px" alt="Public speaking"></div>
+        <h3>One-on-One Mentorship</h3>
+        <p>
+
+          Personalized mentorship provides tailored guidance, helping young boys and girls navigate challenges and achieve their goals with the support of experienced mentors. </p>
+      
+      </div>
+      <div class="card">
+        <div class="card__thumb"><img src="assets/tenweb_media_rdjo1pskk.webp" alt="Entrepreneurship"></div>
+        <h3>Team Work And Collaborations</h3>
+        <p>
+          Through teamwork activities,young boys and girls learn to collaborate effectively, build strong relationships and achieve common goals within the ManRise and Ishaforge community.</p>
+     
+      </div>
+    </div>
+
+
+
+    <h1 class="units-heading text-center" style="color: #800020; margin-top: 30px;">Previous Programs</h1>
+    <section id="program-units">
+      <section id="units" class="">
+              <div  class="units-container container-fluid">
+                <div class="unit-card">
+                  <img src="assets/laughing.jpg"  alt="boys program" >
+              </div> 
+                <div class="units-text">
+                  <h1>Releasing the man in the boy</h1>
+                  <p class="">
+                    Manrise and Ishaforge is a mentorship organization committed to spurring boys and girls into young men and women with a purpose, integrity, and leadership skills. In a world where positive male and female role models and clear guidance are often lacking, Manrise and Ishaforge seeks to support, challenge, and inspire authentic manhood and womanhood .
+                </p>
+                <a href="event.html" class="btn2 "><button>Learn More</button></a>
+              </div>           
+              
+                <div class="units-text order-2" >
+                  <h1>Releasing the grace in the girl</h1>
+                  <p class="">
+                    Manrise and Ishaforge is a mentorship organization committed to spurring boys and girls into young men and women with a purpose, integrity, and leadership skills. In a world where positive male and female role models and clear guidance are often lacking, Manrise and Ishaforge seeks to support, challenge, and inspire authentic manhood and womanhood .
+                </p>
+                <a  href="event2.html" class="btn2 "><button>Learn More</button></a>
+              </div>
+              <div class="unit-card order-1">
+                <img src="assets/beads eyes.jpg" class=" " alt="boys program" width="20vh">
+            </div> 
+           
+              </div>
+      </section>
     </section>
 
+<!--     
+    <div class="contact text-center container-fluid">
+      <h1>Start Your Journey Today</h1>
+      <p>Discover how ManRise and Ishaforge can help you unlock your full potential through our mentorship <br> programs and community support.</p>
+      <a href="program.html" class="btn1"><button class="btn1">Explore Programs</button></a>
+      <a href="About.html" class="btn2"><button >Learn More</button></a>
+    </div> -->
 
     
-    <section id="event2" >
-      <h2>Girls Program</h2>
-      <div class="event2-container" >
-        <div class="event2-text" id="event2-text" >
-          <p>Ages 10 - 18</p>
-          <p>Aug 4th - 8th, 2025 | Location: Potterhouse Junior School, along Northern Bypass</p>
-          <h1>Sign up today for the Girls <br> Summer Program <br> On - 4rth August - 8th August  <br> from 9:00 AM - 1:00 PM</h1>
-          <h1 class="py-3">Releasing the Grace in the girl</h1>
-          <p>Join our 5-Day transformative mentorship program designed <br> to bridge the gap 
-            between girlhood and womanhood. In a world where young women 
-            <br>often lack clear rites of passage and positive female role models, our program provides
-            <br> the guidance, challenges, and affirmation needed for girls to develop into women of <br> purpose and character.</p>
-          <a href="event2.html"><button>View program Details..</button></a>
-        </div>
-      </div>
-    </section>
-
-
     <footer class="footer">
         <div class="footer-container">
           <!-- About Section -->
@@ -202,7 +244,7 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="About.html">About</a></li>
-              <li><a href="program.html">Program</a></li>
+              <li><a href="program.html">Programs</a></li>
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
@@ -213,7 +255,7 @@
             <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
             <p><i class="fas fa-envelope"></i> inforiseandforger@gmail.com</p>
           <p><i class="fas fa-phone"></i> +254 748 965 752</p>
-          <p><i class="fas fa-phone"></i> ++254 733 271 424</p>
+          <p><i class="fas fa-phone"></i> +254 733 271 424</p>
           </div>
       
           <!-- Social Media Links -->

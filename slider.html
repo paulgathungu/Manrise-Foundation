@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ManRise & IshForge Slider</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    .slider {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    .btn {
+      background: #ff914d;
+      padding: 12px 25px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider">
+  <!-- Slider 1 -->
+  <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61');">
+    <h1>Empowering the Next Generation</h1>
+    <p>We guide boys and girls through adolescence into confident, responsible adulthood through mentorship and character-building programs.</p>
+    <button class="btn">Learn More About Us</button>
+  </div>
+
+  <!-- Slider 2 -->
+  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1588072432836-e10032774350');">
+    <h1>Life Skills, Mentorship & Growth</h1>
+    <p>Our programs cover mental health, personal values, career guidance, emotional intelligence, and real-world skills.</p>
+    <button class="btn">Explore Our Programs</button>
+  </div>
+
+  <!-- Slider 3 -->
+  <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');">
+    <h1>Start Your Journey</h1>
+    <p>Take the first step toward personal growth, confidence, and emotional readiness for adulthood with our guided youth programs.</p>
+    <button class="btn">Start Your Journey</button>
+  </div>
+</div>
+
+<script>
+  let index = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide() {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+    index = (index + 1) % slides.length;
+  }
+
+  setInterval(showSlide, 5000); // Change slide every 5 seconds
+</script>
+
+</body>
+</html>

@@ -8,7 +8,6 @@
 }
 
 .navbar .navbar-nav .nav-link {
-    padding-left: 30px;
     color: #fff;
     transition: color 0.3s ease;
 }
@@ -16,14 +15,16 @@
    /* program hero section*/
 
 .hero-program{
+    text-align: center;
     position: absolute;
     top: 0;
     width: 100%;
-    height: 90vh;
+    height: 70vh;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(assets/laughing.jpg);
     background-size: cover;
     background-position: center;
 }
+about-txt
 
 .abt{
   color: #800020;
@@ -82,7 +83,7 @@
 
 
   .program-text {
-    top: 35%;
+    top: 50%;
     padding-left: 10px;
   }
 }
@@ -306,7 +307,6 @@ form {
   color: #fff;
   position: relative;
   top: 40%;
-  font-size: 30px;
 }
 
 .about-home{
@@ -329,7 +329,20 @@ form {
   .about-home p{
     text-align: center;
   }
+  .hero-about{
+    height: 100vh;
+  }
+  .about-txt {
+    top: 50%;
+  }
+  .about-txt p{
+    font-size: 20px;
+  }
+  .about-txt h1{
+    font-size: 40px;
+  }
 }
+program-text
 
 .values{
   width: 100%;
@@ -472,4 +485,4 @@ label {
 }
 
 
-
+  
