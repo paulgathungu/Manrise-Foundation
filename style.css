@@ -161,8 +161,6 @@ body h1 h2 h3 {
 }
 
 @media (max-width:900px) {
-  .navbar {
-  }
   .nav-link.active {
     border-bottom: none;
     border-color: none;
